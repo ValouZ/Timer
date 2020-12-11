@@ -1,0 +1,252 @@
+/* By Valentin Debray and Fanny Maille */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    /* font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-family: 'Staatliches', cursive; */
+}
+
+*::selection{
+    color: #fff;
+    background: #46D4AD;
+}
+
+body{
+    background: #0F0E17;
+}
+
+.timer-btn{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 8vh;
+}
+
+
+button,
+input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: 'Staatliches', cursive; 
+    font-size: 2vw;
+    background: #46D4AD;
+    color: #0F0E17;
+    border: 0.5px solid #0F0E17;
+    transition: 0.1s linear;
+    cursor: pointer;
+}
+
+/* Chrome, Safari, Edge, Opera */
+/* Cacher les petites flèches pour incrémenter ou décrémenter les nombres */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* Firefox */
+/* Permet de donner le style d'une textfield à un input 
+number pour ne pas avoir les flèches */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.btn-add5{
+    font-family: 'Big Shoulders Display', cursive;
+    margin-top: 20px;
+    font-weight: bold;
+    height: 5vw;
+    width: 35vw;
+    border-radius: 50px;
+    border: 2px solid #46D4AD;
+}
+
+.btn-hover:hover,
+.btn-add5-hover:hover{
+    background-color:#0F0E17;
+    color: #46D4AD;
+}
+
+button:focus,
+input:focus{
+    outline:none;
+}
+
+.set-timer{
+    font-size: 3vw;
+    transition: 0.1s linear;
+}
+
+.start{
+    background: #fff;
+    color: #0F0E17;
+}
+
+.start:hover{
+    color: #fff;
+    background-color: #0F0E17;
+}
+
+.stop{
+    background: #dd4244;
+    color: white;
+}
+
+.stop:hover{
+    background: white;
+    color: #dd4244;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 92vh;
+    color: #46D4AD;
+}
+
+.timer-inputs,
+.hour-end-inputs{
+    display: flex;
+    align-items: flex-end;
+    font-size: 15vw;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    margin-bottom: 35px;
+    color: #46D4AD;
+}
+
+.timer-inputs input,
+.hour-end-inputs input{
+    width: 15vw;
+    font-size: 15vw;
+    font-family: inherit;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    color: #46D4AD;
+    transition: 0.05s linear;
+    border-radius: 5%;
+}
+
+.timer-inputs input:hover,
+.hour-end-inputs input:hover{
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.timer-input::placeholder,
+.hour-input::placeholder{
+    font-size: 15vw;
+    text-align: center;
+    color: #46D4AD;
+}
+
+.timer-inputs .placeholder::placeholder,
+.hour-end-inputs .placeholder::placeholder{
+    font-size: 15vw;
+    text-align: center;
+    color: #dd4244;
+}
+
+.timer-in-process{
+    font-size: 15vw;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+}
+
+.end-timer{
+    font-size: 4vw;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+.hour{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hour-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 4vw;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+.or{
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 3vw;
+    margin: 20px 75px 15px 75px;
+}
+
+@media screen and (min-width: 1200px){
+
+    button{
+        font-size: 25px;
+    }
+
+    .set-timer{
+        font-size: 35px;
+    }
+
+    .timer-inputs,
+    .hour-end-inputs{
+        font-size: 180px;
+    }
+
+    .timer-inputs input,
+    .hour-end-inputs input{
+        width: 180px;
+        height: 220px;
+        font-size: 180px;
+    }
+
+    .timer-input::placeholder,
+    .hour-input::placeholder{
+        font-size: 180px;
+    }
+
+    .timer-inputs .placeholder::placeholder,
+    .hour-end-inputs .placeholder::placeholder{
+        font-size: 180px;
+    }
+
+    .timer-in-process{
+        font-size: 180px;
+    }
+
+    .end-timer{
+        font-size: 50px;
+    }
+
+    .hour-info{
+        font-size: 50px;
+    }
+    
+    .or{
+        font-size: 35px;
+    }
+
+    .btn-add5{
+        height: 60px;
+        width: 420px;
+    }
+}
+
+@media screen and (min-width: 1400px){
+
+    .container{
+        flex-direction: row;
+    }
+
+}

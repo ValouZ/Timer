@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Timer</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Big+Shoulders+Stencil+Display:wght@500&family=Staatliches&display=swap" rel="stylesheet">
+        <link rel="icon" href="stopwatch.svg" />
+    </head>
+    <body>
+        <div class="timer-btn">
+            <!-- Bouton de timer, la valeur est à mettre en seconde -->
+            <button class="btn btn-hover" value="300"><p>WORK (5min)</p></button>
+            <button class="btn btn-hover" value="900"><p>PAUSE (15min)</p></button>
+            <button class="btn btn-hover" value="1200"><p>SNACK (20min)</p></button>
+            <button class="btn btn-hover" value="5400"><p>LUNCH BREAK (1h30)</p></button>
+            <button class="set-timer start"><p>Demarrer</p></button>
+        </div>
+         
+        <div class="container">
+            <div class="hour">
+                <div class="hour-end-inputs">
+                    <input type="number" class="hour-input" placeholder=".." min="0" maxlength="999999" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                    <p>h</p>
+                    <input type="number" class="hour-input" placeholder=".." min="0" max="59" maxlength="2" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                    <p>m</p>
+                </div>
+                <div class="hour-info">
+                    <p>Ecrivez une heure de fin</p>
+                </div>
+            </div>
+            <p class="or">ou</p>
+            <div class="timer">
+                <div class="timer-inputs">
+                    <input type="number" class="timer-input" placeholder="00" min="0" maxlength="999999" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                    <p>:</p>
+                    <input type="number" class="timer-input" placeholder="00" min="0" max="59" maxlength="2" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                    <p>:</p>
+                    <input type="number" class="timer-input" placeholder="00" min="0" max="59" maxlength="2" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                </div>
+                <div class="timer-in-process"></div>
+                <div class="end-timer">Saisissez votre timer manuellement</div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
