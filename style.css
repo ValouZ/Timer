@@ -16,8 +16,7 @@
 }
 
 body{
-    /* background: #0F0E17; */
-    background: #dd4244;
+    background: #0F0E17;
 }
 
 .timer-btn{
@@ -26,7 +25,6 @@ body{
     width: 100%;
     height: 8vh;
 }
-
 
 button,
 input{
